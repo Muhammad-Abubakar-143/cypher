@@ -1,0 +1,129 @@
+/********* all banner style ***********/
+.banner-inner {
+	position: relative;
+	z-index: 5;
+	.sub-title {
+		color: var(--main-color);
+	}
+	.title {
+		font-size: 78px;
+		line-height: 1.05;
+		font-weight: 700;
+		span {
+			color: var(--main-color);
+		}
+	}
+	.content {
+		font-size: 18px;
+		margin-top: 20px;
+	}
+	.btn-wrap {
+		margin-top: 40px;	
+	}
+	&.style-white {
+		.title {
+			color: #fff;
+		}
+		.content {
+			color: #fff;
+		}
+	}
+}
+
+.banner-area {
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    .banner-bg-img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0%;
+        left: 0%;
+        background-size: contain;
+        background-repeat: no-repeat; 
+        background-position: center;
+    }
+}
+
+.banner-slider {
+	.item {
+		position: relative;
+		overflow: hidden;
+		&.bg-overlay:after {
+			background: rgba(10, 24, 81, 0.9);
+		}
+		.banner3-shape {
+			content: '';
+			position: absolute;
+			right: -300px;
+			top: 0;
+			background: rgba(0, 96, 255, 0.3);
+			height: 100%;
+			width: 100%;
+			transition: all 1500ms ease;
+    		transition-delay: 200ms;
+		}
+		.shape-1 {
+			clip-path: polygon(70% 0, 85% 0%, 20% 100%, 5% 100%);
+		}
+		.shape-2 {
+			clip-path: polygon(100% 39%, 100% 62%, 77% 100%, 61% 100%);
+		}
+		.shape-3 {
+			clip-path: polygon(18% 0, 31% 0, 0 57%, 0 34%);
+			left: -300px;
+		}
+	}
+	.owl-item.active {
+		.item {
+			.banner3-shape {
+				height: 100%;
+				right: 0;
+			}	
+			.shape-3 {
+				left: 0;
+			}	
+		}
+	}
+	.owl-prev {
+		position: absolute;
+		left: 60px;
+		top: 50%;
+		margin-top: -20px;
+	}
+	.owl-next {
+		position: absolute;
+		right: 60px;
+		top: 50%;
+		margin-top: -20px;
+	}
+}
+
+.banner-area-1 {
+	padding: 328px 0 225px 0;
+}
+.banner-area-2 {
+	padding: 250px 0 250px 0;
+}
+.banner-area-3 .banner-inner {
+	padding: 250px 0 250px 0;
+}
+
+
+.banner-slider .owl-item.active .s-animate-1 {
+  animation: 1.5s 0.3s fadeInUp both;
+}
+.banner-slider .owl-item.active .s-animate-2 {
+  animation: 1.5s 0.7s fadeInUp both;
+}
+.banner-slider .owl-item.active .s-animate-3 {
+  animation: 1.5s 1s fadeInUp both;
+}
+.banner-slider .owl-item.active .s-animate-4 {
+  animation: 1.5s 1.3s fadeInUp both;
+}
+.banner-slider .owl-item.active .s-animate-5 {
+  animation: 1.5s 1.4s fadeInUp both;
+}
